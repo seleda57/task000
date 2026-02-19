@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int [] listOfWeek = {1,2,3,2,12,13,14};
+
+            int maxStreak = 1;
+            int currentStreak = 1;
+
+        for (int i = 1; i < listOfWeek.length; i++) {
+            if (listOfWeek[i] > listOfWeek[i - 1]) {
+                currentStreak++;
+                if (currentStreak > maxStreak) {
+                    maxStreak = currentStreak;
+                }
+            } else {
+                currentStreak = 1;
+
+            }
+            System.out.println(currentStreak);
+        }
+        
+    }
+}
